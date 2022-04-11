@@ -1,1 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+    <style>
+        h1,h2,p{
+            text-align: center;
+        }
+        
+        div{
+            text-align: center;
+        }
+    </style>
+</head>
 
+<body>
+    <hr>
+    <h1> JAVASCRIPT Lecture 5 </h1>
+    <h2>Excercise 2</h2>
+    <hr> 
+    <p id="show">
+    <img id="on"  src="https://www.w3schools.com/js/pic_bulboff.gif">
+    </p>
+   
+    <script>
+      var x=true;
+      function toggle(){
+        
+        if(x){
+            document.getElementById("on").src="https://www.w3schools.com/js/pic_bulbon.gif";
+            x=false;
+          }
+          else{
+            document.getElementById("on").src="https://www.w3schools.com/js/pic_bulboff.gif";
+            x=true;
+          }
+      }
+      
+    </script>
+    <p>
+    <button onclick="toggle()" >toggle</button>
+    </p>
+</body>
+</html>
+
+<!--
+    https://www.w#schools.com/js/pic_bulbon.gif
+-->
