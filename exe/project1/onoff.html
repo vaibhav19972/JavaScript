@@ -31,17 +31,19 @@
         
         if(x){
             document.getElementById("on").src="https://www.w3schools.com/js/pic_bulbon.gif";
+            document.getElementById("button").innerText = "Turn OFF";
             x=false;
           }
           else{
             document.getElementById("on").src="https://www.w3schools.com/js/pic_bulboff.gif";
+              document.getElementById("button").innerText = "Turn OFF";
             x=true;
           }
       }
       
     </script>
     <p>
-    <button onclick="toggle()" >toggle</button>
+    <button id="button" onclick="toggle()" >toggle</button>
     </p>
 </body>
 </html>
