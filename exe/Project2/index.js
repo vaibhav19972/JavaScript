@@ -4,6 +4,13 @@ var panel3 = document.getElementById('panel-3')
 var panel4 = document.getElementById('panel-4')
 var panel5 = document.getElementById('panel-5')
 
+
+               ///classList///
+       
+      //document.getElementById.classList.add('class2')//class2 will be added
+      //document.getElementById,classList.remove('class2')//class2 will be removed
+
+
 function selectPanel(panelname){
       removeactive()
       panelname.classList.add('active')
