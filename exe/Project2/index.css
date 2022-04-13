@@ -4,8 +4,17 @@ body{
     overflow: hidden;
     justify-content: center;
     align-items: center;
-    margin: 0;
+    background-color: rgb(241, 241, 241);
+    margin:0;
+  
+ 
 }
+h1{
+ 
+    background-color: rgb(73, 70, 70);
+  color: rgb(224, 218, 218);
+}
+
 .container{
     display: flex;
     width : 100%;
@@ -16,32 +25,35 @@ body{
     height: 80vh;
     flex: 0.5;
     background-size: cover;
-    background-position: cover;
+    background-position: center;
     background-repeat: no-repeat;
     border-radius: 50px;
-    color: #fff;
+    color: rgb(241, 241, 241);
     cursor: pointer;
     margin: 10px;
-   
+    transition: all 650ms ease-in-out;
+
 
 }
 
 
 .panel.active{
     flex:5;
-    transition: ease-in 700ms;
+
 }
-h2{
-    opacity: 0;
-}
-.panel.active h2{
+
+
+.panel.active h3{
     opacity: 1;
+    transition: opacity 700ms ease-in 400ms ;
 }
 .panel h3{
     font-size: 25px;
     position: absolute;
-    
-
+    opacity: 0;
+    bottom: 20px;
+    margin:0;
+    left: 20px;
 }
 
 
