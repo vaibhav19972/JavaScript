@@ -1,30 +1,52 @@
 var displayArea = document.getElementById('display')
-var str='';
-var prev = '';
-function btclick(x){
-      displayArea.innerText = displayArea.innerText + x; 
-      if(Number(x) || x == '+'|| x=='*' || x=='-' || x=='/' || x=='%' || x == '00'|| x=='0'){
-            str += x;
-      }
-      if('='== x){
-          displayArea.innerText = eval(str)
-          str=String(eval(str))
-      }
 
-      if('cls'== x){
-            str=''
-            displayArea.innerText =''
-      }
-      if('del' == x){
-            let n= str.length;
-            str =str.substring(0,n-1)
-            displayArea.innerText =str
-            console.log(n)
-      }
-     console.log(str)
+function isOperator(x){
+      if( 
+             x == '+'||
+             x=='*'  || 
+             x=='-'  || 
+             x=='/'  || 
+             x=='%' 
+         )
+         return  true
+      else 
+         return false
 }
 
+function btclick(x){
+   if(displayArea.innerText.length>=17)
+       return
 
+   if(x != "cls" && x !='del' && x != '='){
+      if(displayArea.innerText === '0'){
+         if(x != '00' && x != '0' ){
+              if( x == '.' || isOperator(x)){
+                  displayArea.innerText = displayArea.innerText +x;
+              }else{
+                  displayArea.innerText = x; 
+            }
+      }
+       
+      }else{
+            if(isOperator(displayArea.innerText[displayArea.innerText.length -1] ) && isOperator(x)){
+                  displayArea.innerText = displayArea.innerText.slice(0,-1) + x;
+            }else{
+                  displayArea.innerText = displayArea.innerText + x; //main display
+            } 
+      }
+    }else{
+          if(x==='cls'){
+            displayArea.innerText ='0' ;
+          }else if(x==='del'){
+            displayArea.innerText = displayArea.innerText.slice(0,-1);
+          }else{
+              try{
+                     displayArea.innerText = eval(displayArea.innerText); 
+                  } catch(error){
+                      displayArea.innerText ='0';
+                  } 
+          }
 
+    }
      
-
+}
