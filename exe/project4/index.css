@@ -1,0 +1,50 @@
+
+
+*{
+  box-sizing: border-box;
+}
+body{
+  background-image: url("bg.jpg");
+  background-size : cover;
+  background-position: center center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  margin: 0;
+  flex-direction: column;
+  color: rgb(235, 203, 203);
+  
+}
+.h1{
+  font-size: 2rem;
+ 
+  display: flex;
+  flex-wrap: wrap;
+ 
+}
+
+.count{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+}
+.big{
+  font-size: 6rem;
+  font-weight:750;
+  line-height: 2;
+  margin: 0 3rem;
+  
+  
+}
+span{
+    color: rgb(204, 200, 147);
+    font-size: 1.5rem ;
+}
+.sec{
+  text-align: center;
+  color: rgb(30, 36, 36);
+}
