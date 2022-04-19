@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignmet 1</title>
+   
+    <style>
+        body{
+            text-align: center;
+           align-items: center;
+           background-color: rgb(172, 237, 243);
+        }
+        div{
+            align-items: center;
+            text-align: center;
+        }
+        #table{
+            margin-top: 100px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        table,td,th{
+          border: 1px solid;
+            background-color: aliceblue;
+           }
+    </style>
+</head>
+<body>
+    <h1>Interest Calculater</h1>
+<div >
+    <table id="table">
+    
+            <tr>
+                <th> Account Holder </th>
+                <th> Balance </th>
+                <th> Balnce after Interest </th>
+            </tr>
+      
+            <tr>
+                <td>1014501</td>
+                <td><input type="number" id="b1" name="b1"></td>
+                <td id="i1">null</td>
+            </tr>
+            <tr>
+                <td>2424274</td>
+                <td><input type="number" id="b2" name="b2"></td>
+                <td id="i2">null</td>
+            </tr>
+            <tr>
+                <td>3464563</td>
+                <td><input type="number" id="b3" name="b3"></td>
+                <td id="i3">null</td>
+            </tr>
+            <tr>
+                <td>4453844</td>
+                <td><input type="number" id="b4" name="b4"></td>
+                <td id="i4">null</td>
+            </tr>
+            <tr>
+                <td>5456456</td>
+                <td><input type="number" id="b5" name="b5"></td>
+                <td id="i5">null</td>
+            </tr>
+        
+       
+       
+       
+    </table>
+    <p> <button onclick="fetch()">Calculate</button> </p>
+
+    <p>* <b>Interest are caluculater on the bases of balance amount </b><br>
+        <i>10 % Interest and 0.2 % maintainence charge on over 2 lakh <br>
+        5 % Interest and 0.05 % maintainence charge on over 1 lakh <br>
+        2 % Interest and 0 % maintainence charge on below 1 lakh</i><br>
+        ** Terms & Conditions applied
+
+    </p>
+    <script rel="script" src="index.js" ></script>
+</div>
+    
+</body>
+</html>
