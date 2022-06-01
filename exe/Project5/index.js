@@ -33,7 +33,7 @@ var run = ()=>{
 var run2 = ()=>{
 
     let check= document.getElementById('check').value
-    console.log(check.toUpperCase(), `=`, password)
+    console.log(check.toUpperCase(), `=`, encode(check))
       if( check.toUpperCase() == decode(password)  ){
         document.getElementById('show2').innerText = `login success`
       }else{
