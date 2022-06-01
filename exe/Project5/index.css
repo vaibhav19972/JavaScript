@@ -1,0 +1,13 @@
+body{
+text-align: center;
+background-color: rgb(222, 241, 246);
+}
+h1,h2,h4{
+    color: rgb(209, 155, 138);
+}
+h3{
+    color: rgb(138, 236, 138);
+}
+h5{
+    color: rgb(255, 10, 10);
+}
