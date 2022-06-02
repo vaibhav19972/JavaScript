@@ -4,29 +4,30 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>encrypTION</title>
+    <title>Document</title>
     <link rel="stylesheet" href="index.css">
 </head>
 <body>
-    <div >
-        <h1>caesars cipher</h1>
+    <div id="outerDiv">
+        <div id="innerDiv">
+            <h1>Sign UP</h1>
+            Enter password
+            <input  id="pass">
+            <button type="submit" onclick="run()">save</button>
+            <h3 id="show1"></h3>
+        </div>
+
         <hr>
-        <hr>
-        <h1>Sign UP</h1>
-        Enter password
-        <input  id="pass">
-        <button type="submit" onclick="run()">save</button>
-        <h3 id="show1"></h3>
-        <hr>
-        <hr>
-        <h1>Log IN</h1>
-        Enter password
-        <input  id="check">
-        <button type="submit" onclick="run2()">Enter</button>
-        <h3 id="show2"></h3>
-        <hr>
-        <hr>
-        <h5>Refer console logs for more informatino</h6>
+
+        <div id="innerDiv">
+            <h1>Log IN</h1>
+            Enter password
+            <input  id="check">
+            <button type="submit" onclick="run2()">Enter</button>
+            <h3 id="show2"></h3>
+        </div>
+ 
+        <h5>Refer console logs for more information</h6>
     </div>
     <script src="index.js">
     

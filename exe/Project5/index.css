@@ -3,11 +3,36 @@ text-align: center;
 background-color: rgb(222, 241, 246);
 }
 h1,h2,h4{
-    color: rgb(209, 155, 138);
+    color: rgb(207, 209, 138);
 }
 h3{
     color: rgb(138, 236, 138);
 }
 h5{
     color: rgb(255, 10, 10);
+}
+#outerDiv{
+    padding: 30px;
+    border: 2px solid rgb(112, 121, 121);
+}
+#innerDiv{
+    padding: 30px;
+    border: 2px solid rgb(163, 205, 236);
+}
+
+input{
+    display:block;
+    margin: auto;
+    padding: 6px 15px;
+    font-size: 1.5rem;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+}
+button{
+    padding: 5px 18px;
+    font-size: 1.3em;
+    color: rgb(255, 255, 255);
+    background-color: rgb(175, 149, 223);
+    border-radius: 30px;
 }

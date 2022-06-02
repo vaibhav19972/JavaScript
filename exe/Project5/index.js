@@ -7,7 +7,7 @@ const lookup = {
     'U': 'H','V': 'I','W': 'J','X': 'K',
     'Y': 'L','Z': 'M',
   };
-  console.table(lookup)
+  console.log("Encryption Used",lookup)
   let decode = (encodedStr) => encodedStr.split('').map((elem)=>{
       if(lookup[elem] == undefined )
         return elem;
@@ -22,21 +22,23 @@ const lookup = {
         return lookup[ele]
     }
   ).join('')
-var password
-var run = ()=>{
 
+let password
+let run = ()=>{
     password= document.getElementById('pass').value
     password = encode(password.toUpperCase())
-    document.getElementById('show1').innerText = `password saved as ${password}`
-
+    console.log(`Password saved as ${password}`)
+    document.getElementById('show1').innerText = `Password saved successfully`
 }
-var run2 = ()=>{
+let run2 = ()=>{
 
-    let check= document.getElementById('check').value
-    console.log(check.toUpperCase(), `=`, encode(check))
-      if( check.toUpperCase() == decode(password)  ){
-        document.getElementById('show2').innerText = `login success`
+    let c= document.getElementById('check').value
+    console.log(`Decodeing saved password...`)
+      if( c.toUpperCase() == decode(password)  ){
+        document.getElementById('show2').innerText = `Password correct, login access granted!`
+        console.log(`Password Matched`)
       }else{
-        document.getElementById('show2').innerText = `login failed`
+        document.getElementById('show2').innerText = `Password incorrect, access denied!`
+        console.log(`Password doesnt match`)
       }
 }
