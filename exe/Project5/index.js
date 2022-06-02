@@ -39,7 +39,7 @@ let encode = (str) => str.split("").map(
 let password
 let run = () => {
   password = document.getElementById('pass').value
-  if (password.length <= 8) {
+  if (password.length < 8) {
     document.getElementById('show1').innerText = `Password is weak enter more then 8 characters`
     return;
   }
@@ -48,7 +48,7 @@ let run = () => {
   document.getElementById('show1').innerText = `Password saved successfully`
 }
 let run2 = () => {
-  if (password == undefined || password.length <= 8) {
+  if (password == undefined || password.length < 8) {
     document.getElementById('show2').innerText = `Password doesn't exist`
     return;
   }
