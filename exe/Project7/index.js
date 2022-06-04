@@ -9,6 +9,15 @@ let homeNav = document.getElementById('homeNav');
 let signupNav = document.getElementById('signupNav');
 let loginNav = document.getElementById('loginNav');
 let helpNav = document.getElementById('helpNav');
+
+let obj={
+	name : '' ,
+	email: '' ,
+	phone:'',
+	state:'',
+	zip:'',
+
+  }
     
 /**
  * tab switchs
@@ -44,7 +53,7 @@ let helpNav = document.getElementById('helpNav');
         case 'Help':
             helpNav.classList.add('active')
             helpPage.style.display = 'block'
-            console.log('help p age')
+            console.log('help page')
 
 	}
 }
@@ -56,7 +65,9 @@ let helpNav = document.getElementById('helpNav');
  let phoneInvalid = document.getElementById("invalidPhone")
  let stateInvalid = document.getElementById("invalidState")
  let zipCodeInvalid = document.getElementById("invalidZip")
- let vaildCheck = document.getElementById("invalidCheck")
+ let vaildCheck = document.getElementById("invalidCheckMsg")
+ let fillAll = document.getElementById("fillAll")
+ let successMsg = document.getElementById("successMsg")
 
  function validate() {
 	let name = document.getElementById("name").value;
@@ -65,7 +76,8 @@ let helpNav = document.getElementById('helpNav');
 	let state = document.getElementById("state").value;
 	let zipCode = document.getElementById("zip").value;
 	let invalidCheck = document.getElementById("invalidCheck");
-	console.log("hi")
+	
+	console.log("hi1")
 	let ct=0;
   
 	if (name === ''){
@@ -105,13 +117,55 @@ let helpNav = document.getElementById('helpNav');
   
 	if( !invalidCheck.checked ){
 	  vaildCheck.style.display = 'block'
+	  console.log('agree')
 	} else {
 		vaildCheck.style.display = 'none'
 	  ct++
 	}
     if(ct === 6){
-		return true;
+		fillAll.style.display = 'none'
+		obj.name=name
+		obj.phone=phoneNumber
+		obj.email=email
+		obj.zip=zipCode
+		obj.state=state
+		successMsg.style.display='block'
+		
 	}else{
-		return false;
+		fillAll.style.display = 'block'
 	}
+	
   }
+
+  let LemailError = document.getElementById("LemailError")
+  let passwordError = document.getElementById("passwordError")
+  let successMsg2 = document.getElementById("successMsg2")
+  let errorMsg = document.getElementById("errorMsg")
+
+ let login = ()=>{
+
+	let enteredEmail = document.getElementById('Lemail').value;
+ 	let enteredPassword = document.getElementById('password').value;
+
+	let ct=0;
+	if(obj.email === enteredEmail){
+		ct++;
+		LemailError.style.display = 'none'
+	}else{
+		LemailError.style.display = 'block'
+	}
+
+	if(obj.phone === enteredPassword){
+		passwordError.style.display = 'none'
+		ct++;
+	}else{
+		passwordError.style.display = 'block'
+	}
+	if(ct === 2){
+		errorMsg.style.display ='none'
+		successMsg2.style.display='block'
+	}else{
+		successMsg2.style.display='none'
+		errorMsg.style.display ='block'
+	}
+ }

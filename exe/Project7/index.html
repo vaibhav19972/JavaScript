@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
     <link rel="stylesheet" href="index.css">    
@@ -151,7 +152,7 @@
                               <label class="form-check-label" for="invalidCheck">
                                 Agree to terms and conditions
                               </label>
-                              <div class="invalid-feedback" id="invalidCheck">
+                              <div class="invalid-tooltip" id="invalidCheckMsg">
                                 You must agree before submitting.
                               </div>
                             </div>
@@ -160,6 +161,12 @@
                     <p style="text-align: center;">
                         <button class="btn btn-primary" onclick="validate()" type="submit">Submit</button>
                     </p>
+                    <div id="fillAll">
+                        <p>* Please fill all the fileds required</p>
+                    </div>
+                    <div id="successMsg">
+                        <p>Signed Up successfully<br>Your phone is your default password</p>
+                    </div>
                 </form>
                 <h6 style="margin-bottom: 0;"> &nbsp&nbsp T&C apply</h6>
                 <h6 style="margin-bottom: 0;"> &nbsp&nbsp  &copy vaibhav</h6>
@@ -177,8 +184,8 @@
                         <div class="col-md-4 mb-3">
                             <label for="Lemail">Email</label>
                             <input type="email" class="form-control" id="Lemail" value="Mark" required>
-                            <div class="valid-tooltip">
-                                Looks good!
+                            <div class="invalid-tooltip" id="LemailError">
+                               User doesn't exist!
                             </div>
                         </div>
                         <div class="col-md-4 mb-3"></div>
@@ -186,15 +193,21 @@
                         <div class="col-md-4 mb-4">
                             <label for="password">Password</label>
                             <input type="password" class="form-control" id="password" value="Otto" required>
-                            <div class="valid-tooltip">
-                                Looks good!
+                            <div class="invalid-tooltip" id="passwordError">
+                                Incorrect password :(
                             </div>
                         </div>
                         <div class="col-md-4 mb-3"></div>
                     </div>
                     <p style="text-align: center;">
-                        <button class="btn btn-primary" type="submit">Login</button>
+                        <button class="btn btn-primary" onclick="login()" type="submit">Login</button>
                     </p>
+                    <div id="successMsg2">
+                        <p>Loged in successfully</p>
+                    </div>
+                    <div id="errorMsg">
+                        <p>Invalid login credentials</p>
+                    </div>
                 </form>
                 <h6 style="margin-bottom: 0;"> &nbsp&nbsp T&C apply</h6>
                 <h6 style="margin-bottom: 0;"> &nbsp&nbsp  &copy vaibhav</h6>

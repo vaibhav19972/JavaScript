@@ -5,3 +5,11 @@
 h6{
     font-size:xx-small;
 }
+#fillAll,#errorMsg{
+    color: red;
+    display: none;
+}
+#successMsg,#successMsg2{
+    display:none;
+    color:green;
+}
