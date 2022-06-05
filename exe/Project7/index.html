@@ -159,7 +159,7 @@
                         </div>
                     </div>
                     <p style="text-align: center;">
-                        <button class="btn btn-primary" onclick="validate()" type="submit">Submit</button>
+                        <button class="btn btn-primary" onclick="validate()" >Submit</button>
                     </p>
                     <div id="fillAll">
                         <p>* Please fill all the fileds required</p>
@@ -218,21 +218,24 @@
         <div id="helpPage" >
             <div class="jumbotron" style="text-align: center ;">
                 <h1 class="display-4" style="margin-top: 45px; text-align: center;" id="help">Contact Us</h1>
+                <p>Forgot your password? Don't worry it happens<br>Enter you registered</p>
                 <form class="needs-validation" novalidate>
                     <div class="form-row">
                         <div class="col-md-4 mb-3"></div>
                         <div class="col-md-4 mb-3">
                             <label for="Hemail">Email</label>
-                            <input type="email" class="form-control" id="Hemail" value="Mark" required>
-                            <div class="valid-tooltip">
-                                Looks good!
+                            <input type="email" class="form-control" id="Hemail" value="acbd@xyz.com" required>
+                            <div class="invalid-tooltip" id="regEmail">
+                                Email not registered.
                             </div>
                         </div>
-                        <div class="col-md-4 mb-3"></div>
-                        
+                        <div class="col-md-4 mb-3"></div>    
+                    </div>
+                    <div id="resetMsg">
+                        <p style="text-align: center;">Password reset email sent successfully.</p>
                     </div>
                     <p style="text-align: center;">
-                        <button class="btn btn-primary" type="submit">Submit</button>
+                        <button class="btn btn-primary" onclick="send()" type="submit">Submit</button>
                     </p>
                 </form>
                 <h6 style="margin-bottom: 0;"> &nbsp&nbsp T&C apply</h6>

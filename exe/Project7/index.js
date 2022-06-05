@@ -169,3 +169,17 @@ let obj={
 		errorMsg.style.display ='block'
 	}
  }
+ let resetMsg = document.getElementById('resetMsg')
+ let resetEmail = document.getElementById('regEmail')
+
+ let send = ()=>{
+	let Hemail = document.getElementById('Hemail').value;
+	 if(obj.email === Hemail){
+		resetMsg.style.display='block'
+		resetEmail.style.display = 'none'
+	 }else{
+		resetEmail.style.display = 'block'
+		resetMsg.style.display='none'
+	 }
+	 console.log('hi3')
+ }

@@ -9,7 +9,7 @@ h6{
     color: red;
     display: none;
 }
-#successMsg,#successMsg2{
+#successMsg,#successMsg2,#resetMsg{
     display:none;
     color:green;
 }
